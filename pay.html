@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <style>
+            li:hover {
+                border: 1px solid white;
+            }
+
+        </style>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Amazon shop</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+
+    <body>
+        <!-- navbar 1 -->
+        <nav class="navbar navbar-expand-sm bg-dark   p-1 ">
+            <ul class="navbar-nav">
+                <div>
+                    <li class="nav-item h-75">
+                        <img src="./amazon.png">
+                    </li>
+                </div>
+                <!-- modal Hello -->
+                <div>
+                    <li class="nav-item">
+                        <button type="button" class="btn text-light btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#loc">
+                            <p style="margin: -10px;margin-left: -60px;font-size: small;" class="me-4 p-2">Hello</p>
+                            <p class="me-2 h6"><i class="bi bi-geo-alt-fill"></i><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                </svg>Select your address</p>
+                        </button>
+                    </li>
+                </div>
+
+                <div class="modal " id="loc">
+                    <div class="modal-dialog">
+                        <div class="modal-content w-75 ">
+                            <div class="modal-header " style="background-color:rgb(224, 216, 216)">
+                                <h5 class="modal-title ">Choose your location</h5>
+                                <button type="button" class="btn-close" data-bs-toggle="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <p style="font-size:small;color: grey;margin-top:4px;">Select a delivery
+                                        location to see product avaliability and product options</p>
+                                </div>
+                                <div> <button type="button" class="btn btn-warning rounded w-100" style="
+                                                font-size: small;">Sign in to see your addresses</button>
+                                </div>
+                                <div class="text-center mt-2 " style="color:grey;font-size: small;">or enter an
+                                    Indian
+                                    pincode</div>
+                                <li class=" row mt-2">
+                                    <div class="col "><input type="text"></div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-sm rounded btn-outline-secondary w-75  "
+                                            data-bs-dismiss="modal">
+                                            Apply
+                                        </button>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- Input group search -->
+                    <li class="nav-item">
+                        <form>
+                            <div class="input-group ">
+                                <span class="input-group-text dropdown dropdown-toggle" data-bs-toggle="dropdown">All
+                                </span>
+                                <input type="text" class="form-control" style="width:30rem;">
+                                <span class="input-group-text bg-warning "><i class="bi bi-search"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </form>
+                    </li>
+                </div>
+                <!-- Indian flag dropdown -->
+                <div>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a href="#" class=" dropdown-toggle text-light nav-link" data-bs-toggle="dropdown"><img
+                                    src=" ./india.png"></a>
+
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <form>
+                                        <div class=" form-check">
+                                            <input class="form-check-input" type="radio" id="radio7" name="lan">
+                                            <label class="form-check-label" for="radio7">English - EN</label>
+                                        </div>
+                                        <hr>
+                                        <div class=" form-check">
+                                            <input class="form-check-input" type="radio" id="radio6" name="lan">
+                                            <label class="form-check-label" for="radio6">हिंदी - HI</label>
+                                        </div>
+                                        <div class=" form-check">
+                                            <input class="form-check-input" type="radio" id="radio5" name="lan">
+                                            <label class="form-check-label" for="radio5">தமிழ் - TA</label><br>
+                                        </div>
+                                        <div class=" form-check">
+                                            <input class="form-check-input" type="radio" id="radio4" name="lan">
+                                            <label class="form-check-label" for="radio4">తెలుగు - TE</label>
+                                        </div>
+                                        <div class=" form-check">
+                                            <input class="form-check-input" type="radio" id="radio3" name="lan">
+                                            <label class="form-check-label" for="radio3">മലയാളം - ML</label>
+                                        </div>
+                                        <div class=" form-check">
+                                            <input class="form-check-input" type="radio" id="radio2" name="lan">
+                                            <label class="form-check-label" for="radio2">मराठी - MR</label>
+                                        </div>
+                                        <div class=" form-check">
+                                            <input class="form-check-input" type="radio" id="radio1" name="lan">
+                                            <label class="form-check-label" for="radio1">বাংলা - BN</label>
+                                        </div>
+                                        <hr>
+                                        <div class="dropdown-item">
+                                            <p style="font-size: small;"><img src="./india.png" style="width:10px">You
+                                                are shopping on<br> amazon.in
+                                            </p>
+                                        </div>
+                                    </form>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                </div>
+                <div>
+                    <li class="nav-item">
+                        <div class=" dropdown  dropdown-toggle text-light ms-4" data-bs-toggle="dropdown">
+                            <span style="font-size:small ;">Hello,Sign in</span><br><span class="h8 fw-bold">Accounts &
+                                Lists</span></a>
+                        </div>
+                        <!-- <ul class="dropdown-menu">
+                                    <li class="dropdown-item">
+                                        <form action="">
+                                            <div class=" form-check">
+                                                <input class="form-check-input" type="radio" id="radio">
+                                                <label class="form-check-label" for="radio">English - EN</label>
+                                            </div>
+                                        </form>
+                                    </li>
+                                </ul> -->
+                    </li>
+                </div>
+                <!-- Returns and orders -->
+                <div>
+                    <li class="nav-item">
+                        <div class="text-light ms-4"><span style="font-size:small ;">Returns</span><br><span class="h6">
+                                & Orders
+                            </span></a>
+                        </div>
+                    </li>
+                </div>
+                <!-- cart -->
+                <div>
+                    <li class="nav-item">
+                        <div class="text-light ms-4 fw-bold"><img src="cart.png">Cart</a></div>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+
+        <!-- Second nav bar -->
+        <nav class="navbar navbar-expand-sm" style="background-color:rgb(35, 47, 62);">
+
+            <div class="container-fluid">
+                <!-- Offcanvas -->
+                <div class="offcanvas offcanvas-start" id="box">
+                    <div class="offcanvas-header">
+                        <h2 class="offcanvas-title w-100 text-light  fw-bold" style="background-color:rgb(35, 47, 62);">
+                            <i class="bi bi-person-circle"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg> Hello,Sign in
+                        </h2>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body ms-4">
+                        <h4>Trending</h4>
+                        <p>Best Sellers</p>
+                        <p>New Releases</p>
+                        <p>Movers and Shakers</p>
+                        <hr>
+                        <h4>Digital Content and Devices</h4>
+                        <p> Echo & Alexa</p>
+                        <p>Fire-Tv</p>
+                        <p> Amazon Prime Music</p>
+                        <p> Amazon Prime Video</p>
+                        <p>Kindle</p>
+                        <p>Echo & Alexa</h8>
+                            <hr>
+                        <h4>Shop By Department</h4>
+                        <p> Mobile's ,Computers</p>
+                        <p>Appliances,Tv , Electronics</p>
+                        <p> Women's Fashion</p>
+                        <hr>
+                        <p> Toys,Kid's fashion</p>
+                        <p>Kitchen,Home,Pets</p>
+                        <p>Books</h8>
+                    </div>
+                </div>
+
+                <button type="submit" class=" btn btn-outline-light " data-bs-toggle="offcanvas" data-bs-target="#box">
+
+                    <i class="bi bi-list"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>All
+                </button>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href=" #" class=" nav-link text-light btn "> Mobiles</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a href="#" class=" nav-link text-light btn  "> Best Sellers</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a href="#" class=" nav-link text-light "> Fashion</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a href="#" class=" nav-link text-light "> Electronics</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a href="#" class=" nav-link text-light "> Customer Service</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a href="#" class=" nav-link text-light ">Prime</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a href="#" class=" nav-link text-light"> Home & Kitchen</a>
+                    </li>
+                    <li>
+                        <a href="#" class=" nav-link text-light ">Amazon Pay</a>
+                    </li>
+                    <!-- <li class='nav-item'>
+                                <a href="#" class=" nav-link"><button type="submit"
+                                        class="btn text-light btn-outline-dark">Amazon
+                                        Pay</button></a> -->
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="./pay.html" class=" nav-link text-light h5  ">Shopping made easy | Download the
+                            App</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col align-self-start">
+                    <img src="./shp1.jpg" style="width:100%;">
+                </div>
+                <div class="col align-self-center">
+                    <br>
+                    <p><span style="font-size:bolder; font-size: 28px; ">Gaming with Prime</span><br>
+                        <span style="font-family: Arial, sans-serif; font-size: 20px; color:grey"> Prime members
+                            get
+                            access to FREE
+                            in-game content like power-ups, exclusive collectibles,
+                            characters, outfits, skins,themes, in-game currency and more across popular mobile
+                            games,
+                            refreshed frequently. Login with your Amazon account within supported games to claim
+                            in-game
+                            content.
+                            Enjoy frequent new content drops and launches across top international
+                            & Indian mobile games.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col align-self-start">
+                    <img src="./shp2.png" style="width:100%;">
+                </div>
+                <div class="col align-self-center">
+                    <br>
+                    <p><span style="font-size:bolder; font-size: 28px; ">Prime Reading</span><br>
+                        <span style="font-family: Arial, sans-serif; font-size: 20px; color:grey">
+                            Read as much as you want from hundreds of eligible eBooks, comics and more. With a
+                            catalogue
+                            across literature and
+                            fiction, quick reads, romance, non-fiction, and eBooks in Indian languages, you will
+                            always
+                            find something to read.
+
+                            You can enjoy Prime Reading on your Kindle E-reader, or install the free Kindle
+                            reading apps
+                            on mobile, tablet, PC or
+                            Mac. You can also try Prime Reading on the 2MB Kindle Lite Android app designed for
+                            Indian
+                            readers.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col align-self-start">
+                    <img src="./shp3.jpg" style="width:100%;">
+                </div>
+                <div class="col align-self-center">
+                    <br>
+                    <p><span style="font-size:bolder; font-size: 28px; ">Grab the best deals first</span><br>
+                        <span style="font-family: Arial, sans-serif; font-size: 20px; color:grey">
+                            As a Prime member, you get access to exclusive deals across categories. Be among the
+                            first
+                            to decide what's hot and
+                            what's not, and get 30-minute early access to top Lightning Deals every day. Choose
+                            the
+                            Prime Early Access filter when
+                            you search, to see the day’s selected deals.
+
+                            With Amazon Family, Prime members save an additional 15% on diaper subscriptions and
+                            get
+                            exclusive discounts and
+                            recommendations, all tailored for their family. </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+
+            <div class="  navbar-expand-sm container-fluid py-4" style="background-color:#37475A;">
+                <p style="color: white;font-size:medium;" class=" text-center">Back to top</p>
+            </div>
+        </div>
+        <div>
+            <div class="navbar navbar-expand-sm" style="background-color: #232F3E;">
+                <div class="container-fluid justify-content-center">
+                    <div class="row ">
+                        <!-- <div class="#0F1111;"></div> -->
+                        <div class="col">
+                            <ul class="text-light list-unstyled">
+                                <li class="strong fw-bold">Get to Know Us</li>
+                                <li class="small text-light  "><a href="#" style="color:white">About us</a></li>
+                                <li class="small">Careers</li>
+                                <li class="small">Press Releases</li>
+                                <li class="small"> Amazon Cares</li>
+                                <li class="small"> Get a Smile</li>
+                            </ul>
+                        </div>
+                        <div class="col ">
+                            <ul class="text-light list-unstyled">
+                                <li class="strong fw-bold">Connect with Us</li>
+                                <li class="small text-light  ">Facebook</li>
+                                <li class="small">Twitter</li>
+                                <li class="small">Instagram</li>
+                            </ul>
+
+                        </div>
+                        <div class="col ">
+                            <ul class="text-light list-unstyled">
+                                <li class="strong fw-bold">Make Money with Us</li>
+                                <li class="small text-light  ">Sell on Amazon</li>
+                                <li class="small">Sell under Amazon Accelerator</li>
+                                <li class="small">Become an Affiliate</li>
+                                <li class="small">Advertise Your Products</li>
+                                <li class="small">Amazon Pay on Merchants</li>
+                            </ul>
+                        </div>
+                        <div class="col ">
+                            <ul class="text-light list-unstyled">
+                                <li class="strong fw-bold">Let Us Help You</li>
+                                <li class="small text-light  "> COVID-19 and Amazon</li>
+                                <li class="small"> Your Account</li>
+                                <li class="small">Returns Centre</li>
+                                <li class="small">100% Purchase Protection</li>
+                                <li class="small">Amazon Assistant </li>
+                                <li class="small"> Help</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class=" row ">
+
+                                <a href="#" navlink class="dropdown dropdown-toggle  text-center text-light "
+                                    data-bs-target="dropdown" style=" border: grey; border-width: 1px solid grey;">
+                                    English</a>
+                            </div>
+                            <!-- Footer countries -->
+                            <div>
+                                <ul class="navbar-nav text-light justify-content-center">
+
+                                    <li class="nav-item ">
+                                        <a href="#" class="nav-link text-light small">Australia</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-light small">Brazila</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link text-light small">Canada</a>
+                                    </li>
+                                    <div>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link text-light small">Japan</a>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link text-light small">United States</a>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link  text-light small">Spain</a>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link text-light small">Turkey</a>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link text-light small">United Arab
+                                                Emirates</a>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link text-light small">Mexico</a>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link text-light small">Poland</a>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+
+
+
+
+    </body>
+
+</html>
